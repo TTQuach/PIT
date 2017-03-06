@@ -106,11 +106,54 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\background.jpg" />
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="icons\industries\aerospace.png" />
+    <Content Include="icons\industries\automotive.png" />
+    <Content Include="icons\industries\banking_0.png" />
+    <Content Include="icons\industries\consumerprod_0.png" />
+    <Content Include="icons\industries\healthcare.png" />
+    <Content Include="icons\industries\hightech.png" />
+    <Content Include="icons\industries\industrial.png" />
+    <Content Include="icons\industries\insightsdata_0.png" />
+    <Content Include="icons\industries\insurance.png" />
+    <Content Include="icons\industries\lifescience.png" />
+    <Content Include="icons\industries\manufacture.png" />
+    <Content Include="icons\industries\oil.png" />
+    <Content Include="icons\industries\publicsec.png" />
+    <Content Include="icons\industries\telecom.png" />
+    <Content Include="icons\industries\utilities.png" />
+    <Content Include="icons\services\applife.png" />
+    <Content Include="icons\services\bpo.png" />
+    <Content Include="icons\services\businessprocess.png" />
+    <Content Include="icons\services\cloud.png" />
+    <Content Include="icons\services\conserve.png" />
+    <Content Include="icons\services\digiservices.png" />
+    <Content Include="icons\services\digitalmfg.png" />
+    <Content Include="icons\services\icon_1_bigger_v2.png" />
+    <Content Include="icons\services\icon_connectivity_50x50px_0.png" />
+    <Content Include="icons\services\infraserve.png" />
+    <Content Include="icons\services\insightsdata.png" />
+    <Content Include="icons\services\profserv.png" />
+    <Content Include="icons\services\testserve.png" />
+    <Content Include="js\angular.min.js" />
+    <Content Include="home.css" />
+    <Content Include="home.html" />
+    <Content Include="home.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.1.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,226 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+    font-family: Montserrat Medium;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h2{
+    font-family: Montserrat Medium;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+	font-family: Montserrat Regular, Helvetica, sans-serif;
+	color: #005294;
+	font-size:  18px;
+    text-align: left;
+}
+
+.titelcolor1{
+    color:#005294;
+    padding-right: 5px;
+}
+
+.titelcolor2{
+    color:#0094c3;
+}
+
+.strong{
+    font-weight: bold;
+}
+
+.chat {
+  width: 600px;
+  margin-left: 400px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/*Speech bubble*/
+.bubble {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #B2B2B2;
+  display: inline-block;
+  padding: 20px 18px;
+  position: relative;
+  vertical-align: top;
+}
+
+.bubble::before {
+  background-color: #ffffff;
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  position: absolute;
+  top: 11px;
+  transform: rotate( 29deg) skew( -35deg);
+  -moz-transform: rotate( 29deg) skew( -35deg);
+  -ms-transform: rotate( 29deg) skew( -35deg);
+  -o-transform: rotate( 29deg) skew( -35deg);
+  -webkit-transform: rotate( 29deg) skew( -35deg);
+  width: 20px;
+}
+
+.you {
+  float: left;
+  margin: 20px 45px 20px 20px;
+}
+
+.you::before {
+  box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4);
+  left: -9px;
+}
+
+.me {
+  float: right;
+  margin: 20px 20px 20px 45px;
+}
+
+.me::before {
+  box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4);
+  right: -9px;
+}
+
+th, td{
+    font-family: Montserrat Regular, Helvetica, sans-serif;
+	color: #005294;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    padding: 10px;
+}
+
+input[type="text"]{
+  text-align: center;
+  font-size: 16px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e7efff;
+  height: 46px;
+  width: 270px;
+  margin: auto;
+  color: #005294
+}
+
+/*Buttons*/
+.btn-submit{
+  background: #0094c3;
+  background-image: -webkit-linear-gradient(top, #0094c3, #005294);
+  background-image: -moz-linear-gradient(top, #0094c3, #005294);
+  background-image: -ms-linear-gradient(top, #0094c3, #005294);
+  background-image: -o-linear-gradient(top, #0094c3, #005294);
+  background-image: linear-gradient(to bottom, #0094c3, #005294);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-family: ‘Montserrat’, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  height: 46px;
+  width: 188px;
+}
+
+.btn-finish{
+  background: #0094c3;
+  background-image: -webkit-linear-gradient(top, #0094c3, #005294);
+  background-image: -moz-linear-gradient(top, #0094c3, #005294);
+  background-image: -ms-linear-gradient(top, #0094c3, #005294);
+  background-image: -o-linear-gradient(top, #0094c3, #005294);
+  background-image: linear-gradient(to bottom, #0094c3, #005294);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-family: ‘Montserrat’, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  height: 46px;
+  width: 188px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #0094c3;
+  text-decoration: none;
+}
+
+/*input form*/
+.inputForm{
+    padding: 15px;
+}
+
+.form{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 20px 18px;
+    position: relative;
+    vertical-align: top;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.form-inline{
+    margin-top: 40px;
+}
+.form-group{
+    font-family: Montserrat Regular, Helvetica, sans-serif;
+	color: #005294;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    padding: 10px;
+}
+
+.grid-button{
+    font-family: Montserrat Regular, Helvetica, sans-serif;
+	color: #005294;
+    text-align: left;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.grid-button:hover{
+    background: #0094c3;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.buttons-grid{
+    list-style-type: none;
+    padding-top: 20px;
+    column-count: 2;
+    column-gap: 10px;
+}
