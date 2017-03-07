@@ -17,6 +17,10 @@ h2{
     text-align: center;
 }
 
+body{
+    background: url("images/background.jpg");
+}
+
 p {
 	font-family: Montserrat Regular, Helvetica, sans-serif;
 	color: #005294;
@@ -224,3 +228,33 @@ input[type="text"]{
     column-count: 2;
     column-gap: 10px;
 }
+
+/*page header*/
+.page-header{
+    background: #ffffff;
+    height: 110px;
+    padding-top: 25px;
+    padding-left: 450px;
+}
+
+.page-header h1{
+    font-size: 27px;
+    display: inline;
+    padding-left: 100px;
+}
+
+.page-header img{
+   /*float: left;*/
+   margin: auto;
+}
+
+/*logo's/icons*/
+.aerospace-logo{
+    background: url('icons/industries/aerospace.png') left center no-repeat;
+    padding-left: 15px;
+    width: 30px;
+    height: 32px;
+
+}
+
+

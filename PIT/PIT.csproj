@@ -141,6 +141,7 @@
     <Content Include="icons\services\insightsdata.png" />
     <Content Include="icons\services\profserv.png" />
     <Content Include="icons\services\testserve.png" />
+    <Content Include="images\capgemini logo.png" />
     <Content Include="js\angular.min.js" />
     <Content Include="home.css" />
     <Content Include="home.html" />
