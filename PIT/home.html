@@ -14,7 +14,7 @@
         <div class="header-text"><h1><span class="titelcolor1">Ask</span><span class="titelcolor2">Capbot</span></h1></div>
     </div>
     <div class="row">
-        <div ng-app="" class="chat">
+        <div ng-app="myApp" ng-controller="industry" class="chat">
             <div class="bubble me">
                 <p>My name is Capbot. I am in contact with my <span class="strong">180.000 colleagues</span>. I know about their expertise and I am able to match them to your questions.</p>
             </div>
@@ -28,32 +28,30 @@
             <div class="bubble me" ng-show="showdiv4" id="div4">
                 <p>Well nice to meet you <span class="strong">{{name}}</span>. I suppose you have a burning question for me. But before we begin with this I need to know two things from you. <span class="italic">1. In what kind of industry is your question related?</span></p>
             </div>
+
             <div class="form">
                 <h1>
                     <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
                 </h1>
-                <ul class="buttons-grid">
-                    <li><button otype="submit" class="grid-button"><img class="pit-icons" src="icons/industries/aerospace.png" /> Aerospace & Defence</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/industrial.png" /> Industrial Products</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/automotive.png" /> Automotive</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries//insurance.png" /> Insurance</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/banking_0.png" /> Banking & Capital Markets</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/lifescience.png" /> Life Sciences</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/consumerprod_0.png" /> Consumer Products & Retail</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/manufacture.png" /> Manufacturing</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/insightsdata_0.png" /> Distribution & Transportation</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/oil.png" /> Oil & Gas, Chemicals</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/healthcare.png" /> Healthcare</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/publicsec.png" /> Public Sector</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/hightech.png" /> High Tech</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Telecoms & Entertainment</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/utilities.png" /> Utilities</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Other</button></li>
+                <ul class="industries buttons grid" ng-controller="industry">
+                    <li ng-repeat="industry in industries">
+                        <button class="grid-button" ng-click="showDetails = ! showDetails">
+                            <div class="gallery">
+                                <div class="img-wrap">
+                                    <img ng-src="{{industry.images[0]}}" />
+                                </div>
+                            </div>
+                            {{industry.definition}}
+                        </button>
+                        <div class="bubble me procedure-details" ng-show="showDetails">
+                            <p>{{industry.text}} Just one more question before you're up</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="bubble me">
-                <p>Hmmmm... i like oil. That's good for my body. Just one more question before you're up <span class="strong">{{name}}</span>. What is the category of your question?</p>
+                <p>{{industry.text}} Just one more question before you're up<span class="strong">{{name}}</span>. What is the category of your question?</p>
             </div>
 
             <div class="form">
@@ -87,7 +85,7 @@
                 </h1>
                 <form>
                     <ul class="buttons-grid">
-                        <li><input type="text" class="form-input" id="firstNamelastName" placeholder="First & Lastname"></li>         
+                        <li><input type="text" class="form-input" id="firstNamelastName" placeholder="First & Lastname"></li>
                         <li><input type="text" class="form-input" id="inputEmail" placeholder="Company email"></li>
                         <li><input type="text" class="form-input" id="company" placeholder="Company"></li>
                         <li><input type="text" class="form-input" id="telephonenumber" placeholder="Telephone number"></li>

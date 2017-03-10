@@ -237,7 +237,14 @@ input.form-input{
     color: #ffffff;
 }
 
-.buttons-grid{
+ul.buttons-grid{
+    list-style-type: none;
+    padding-top: 20px;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+ul.industries.buttons.grid.ng-scope{
     list-style-type: none;
     padding-top: 20px;
     column-count: 2;
