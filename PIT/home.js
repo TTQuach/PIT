@@ -1,57 +1,74 @@
 ﻿var app = angular.module('myApp', []);
 
 app.controller("industry", function ($scope) {
-
-    $scope.industries = [{
+    this.industrieText = "";
+    this.setIndustrieText = function (text) {
+    this.industrieText = text;
+    }
+    this.industries = [{
         definition: 'Aerospace & Defence',
-        text: 'Hmm i like Aerospaceeee',
+        text: 'Hmm i like Aerospaceeee.',
         images: ["icons/industries/aerospace.png"]
     }, {
         definition: 'Industrial Products',
-        text: 'Love industrial',
+        text: 'Love industrial.',
         images: ["icons/industries/industrial.png"]
     }, {
         definition: 'Automotive',
-        text: 'BLABLABLABLA'
+        text: 'CARSSS.',
+        images: ["icons/industries/automotive.png"]
     }, {
         definition: 'Insurance',
-        text: 'BLABLABLABLA'
+        text: 'Insurancee lala.',
+        images: ["icons/industries/insurance.png"]
     }, {
         definition: 'Banking & Capital Markets',
-        text: 'BLABLABLABLA'
+        text: 'Moneysss.',
+        images: ["icons/industries/banking_0.png"]
     }, {
         definition: 'Life Sciences',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/lifescience.png"]
     }, {
         definition: 'Consumer Products & Retail',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/consumerprod_0.png"]
     }, {
         definition: 'Manufacturing',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/manufacture.png"]
     }, {
         definition: 'Distribution & Transportation',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/insightsdata_0.png"]
     }, {
         definition: 'Oil & Gas, Chemicals',
-        text: 'BLABLABLABLA'
+        text: 'Hmm..I like oil. That is good for my body.',
+        images: ["icons/industries/oil.png"]
     }, {
         definition: 'Healthcare',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/healthcare.png"]
     }, {
         definition: 'Public Sector',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/publicsec.png"]
     }, {
         definition: 'High Tech',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/hightech.png"]
     }, {
         definition: 'Telecoms & Entertainment',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/telecom.png"]
     }, {
         definition: 'Utilities',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/utilities.png"]
     }, {
         definition: 'Other',
-        text: 'BLABLABLABLA'
+        text: 'BLABLABLABLA.',
+        images: ["icons/industries/telecom.png"]
 
     }];
 });

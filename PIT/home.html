@@ -14,7 +14,7 @@
         <div class="header-text"><h1><span class="titelcolor1">Ask</span><span class="titelcolor2">Capbot</span></h1></div>
     </div>
     <div class="row">
-        <div ng-app="myApp" ng-controller="industry" class="chat">
+        <div ng-app="myApp" ng-controller="industry as ctrl" class="chat">
             <div class="bubble me">
                 <p>My name is Capbot. I am in contact with my <span class="strong">180.000 colleagues</span>. I know about their expertise and I am able to match them to your questions.</p>
             </div>
@@ -23,9 +23,9 @@
             <div class="inputForm">
                 <h1>What's your name?</h1>
                 <input type="text" ng-model="name" placeholder="Enter name here">
-                <button ng-click="showdiv4=true" type="submit" class="btn-submit">Send</button>
+                <button ng-click="showDivIntro=true" type="submit" class="btn-submit">Send</button>
             </div>
-            <div class="bubble me" ng-show="showdiv4" id="div4">
+            <div class="bubble me" ng-show="showDivIntro" id="div4">
                 <p>Well nice to meet you <span class="strong">{{name}}</span>. I suppose you have a burning question for me. But before we begin with this I need to know two things from you. <span class="italic">1. In what kind of industry is your question related?</span></p>
             </div>
 
@@ -34,24 +34,17 @@
                     <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
                 </h1>
                 <ul class="industries buttons grid" ng-controller="industry">
-                    <li ng-repeat="industry in industries">
-                        <button class="grid-button" ng-click="showDetails = ! showDetails">
-                            <div class="gallery">
-                                <div class="img-wrap">
-                                    <img ng-src="{{industry.images[0]}}" />
-                                </div>
-                            </div>
+                    <li ng-repeat="industry in ctrl.industries">
+                        <button class="grid-button" ng-click="ctrl.setIndustrieText(industry.text)">
+                            <img ng-src="{{industry.images[0]}}" />
                             {{industry.definition}}
                         </button>
-                        <div class="bubble me procedure-details" ng-show="showDetails">
-                            <p>{{industry.text}} Just one more question before you're up</p>
-                        </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="bubble me">
-                <p>{{industry.text}} Just one more question before you're up<span class="strong">{{name}}</span>. What is the category of your question?</p>
+            <div class="bubble me procedure-details" ng-if="ctrl.industrieText != ''">
+                <p>{{ctrl.industrieText}} Just one more question before you're up <span class="strong">{{name}}</span>. What is the category of your question?</p>
             </div>
 
             <div class="form">
@@ -75,8 +68,9 @@
                     <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Other</button></li>
                 </ul>
             </div>
+
             <div class="bubble me">
-                <p id="demo">{{output}}</p>
+                <p> </p>
             </div>
 
             <div class="form">
