@@ -1,21 +1,26 @@
-﻿<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-<link href="home.css" rel="stylesheet" />
-<script src="js/angular.min.js"></script>
-<script src="js/jquery-3.1.1.min.js"></script>
-
-<html>
+﻿<html>
+<head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="home.css" rel="stylesheet" />
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="home.js"></script>
+    <title>Ask Capbot</title>
+</head>
 <body>
-    <div class="page-header">
-        <img src="images/capgemini logo.png" alt="logo" />
-        <h1><span class="titelcolor1">Ask</span><span class="titelcolor2">Capbot</span></h1>
+    <div class="header">
+        <div class="pit-header-logo"><img src="images/capgemini logo.png" alt="logo" /></div>
+        <div class="header-text"><h1><span class="titelcolor1">Ask</span><span class="titelcolor2">Capbot</span></h1></div>
     </div>
     <div class="row">
         <div ng-app="" class="chat">
-            <div class="bubble me" id="div1">
+            <div class="bubble me">
                 <p>My name is Capbot. I am in contact with my <span class="strong">180.000 colleagues</span>. I know about their expertise and I am able to match them to your questions.</p>
             </div>
-            <div class="bubble me" id="div2"><p>So nice to meet you! What is your name so we can make this conversation a bit more personal?</p></div>
-            <div class="inputForm" id="div3">
+
+            <div class="bubble me"><p>So nice to meet you! What is your name so we can make this conversation a bit more personal?</p></div>
+            <div class="inputForm">
                 <h1>What's your name?</h1>
                 <input type="text" ng-model="name" placeholder="Enter name here">
                 <button ng-click="showdiv4=true" type="submit" class="btn-submit">Send</button>
@@ -28,22 +33,22 @@
                     <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
                 </h1>
                 <ul class="buttons-grid">
-                    <li><button type="submit" class="grid-button"><img src="icons/industries/aerospace.png" />Aerospace & Defence</button></li>
-                    <li><button type="submit" class="grid-button">Industrial Products</button></li>
-                    <li><button type="submit" class="grid-button">Automotive</button></li>
-                    <li><button type="submit" class="grid-button">Insurance</button></li>
-                    <li><button type="submit" class="grid-button">Banking & Capital Markets</button></li>
-                    <li><button type="submit" class="grid-button">Life Sciences</button></li>
-                    <li><button type="submit" class="grid-button">Consumer Products & Retail</button></li>
-                    <li><button type="submit" class="grid-button">Manufacturing</button></li>
-                    <li><button type="submit" class="grid-button">Distribution & Transportation</button></li>
-                    <li><button type="submit" class="grid-button">Oil & Gas, Chemicals</button></li>
-                    <li><button type="submit" class="grid-button">Healthcare</button></li>
-                    <li><button type="submit" class="grid-button">Public Sector</button></li>
-                    <li><button type="submit" class="grid-button">High Tech</button></li>
-                    <li><button type="submit" class="grid-button">Telecoms & Entertainment</button></li>
-                    <li><button type="submit" class="grid-button">Utilities</button></li>
-                    <li><button type="submit" class="grid-button">Other</button></li>
+                    <li><button otype="submit" class="grid-button"><img class="pit-icons" src="icons/industries/aerospace.png" /> Aerospace & Defence</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/industrial.png" /> Industrial Products</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/automotive.png" /> Automotive</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries//insurance.png" /> Insurance</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/banking_0.png" /> Banking & Capital Markets</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/lifescience.png" /> Life Sciences</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/consumerprod_0.png" /> Consumer Products & Retail</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/manufacture.png" /> Manufacturing</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/insightsdata_0.png" /> Distribution & Transportation</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/oil.png" /> Oil & Gas, Chemicals</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/healthcare.png" /> Healthcare</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/publicsec.png" /> Public Sector</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/hightech.png" /> High Tech</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Telecoms & Entertainment</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/utilities.png" /> Utilities</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Other</button></li>
                 </ul>
             </div>
 
@@ -56,20 +61,20 @@
                     <span class="titelcolor1">Category of</span><span class="titelcolor2">your question</span>
                 </h1>
                 <ul class="buttons-grid">
-                    <li><button type="submit" class="grid-button">Application Services</button></li>
-                    <li><button type="submit" class="grid-button">Digital Customer Experience</button></li>
-                    <li><button type="submit" class="grid-button">Business Services</button></li>
-                    <li><button type="submit" class="grid-button">Infrastructure Services</button></li>
-                    <li><button type="submit" class="grid-button">Cloud Choice</button></li>
-                    <li><button type="submit" class="grid-button">Insights & Data</button></li>
-                    <li><button type="submit" class="grid-button">Consulting Services</button></li>
-                    <li><button type="submit" class="grid-button">Technology and Engineering</button></li>
-                    <li><button type="submit" class="grid-button">Digital Services</button></li>
-                    <li><button type="submit" class="grid-button">Ready2Series</button></li>
-                    <li><button type="submit" class="grid-button">Digital Manufacturing</button></li>
-                    <li><button type="submit" class="grid-button">Secure your assets</button></li>
-                    <li><button type="submit" class="grid-button">Testing Services</button></li>
-                    <li><button type="submit" class="grid-button">Other</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/applife.png" /> Application Services</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/icon_connectivity_50x50px_0.png" /> Digital Customer Experience</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/businessprocess.png" /> Business Services</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/infraserve.png" /> Infrastructure Services</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/cloud.png" /> Cloud Choice</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/insightsdata.png" /> Insights & Data</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/conserve.png" /> Consulting Services</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/profserv.png"> Technology and Engineering</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/digiservices.png" /> Digital Services</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/bpo.png" /> Ready2Series</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/digitalmfg.png" /> Digital Manufacturing</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/secureyourassets.png" /> Secure your assets</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/testserve.png" /> Testing Services</button></li>
+                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Other</button></li>
                 </ul>
             </div>
             <div class="bubble me">
@@ -80,27 +85,32 @@
                 <h1>
                     <span class="titelcolor1">Formulate</span><span class="titelcolor2">your question</span>
                 </h1>
-                <form class="form-inline">
-                    <div class="form-inline">
-                        <input type="text" class="form-control" id="firstNamelastName" placeholder="First & Lastname">
-                        <input type="text" class="form-control" id="company" placeholder="Company">
-                    </div>
-                    <div class="form-inline">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                        <input type="text" class="form-control" id="telephonenumber" placeholder="Telephone number">
+                <form>
+                    <ul class="buttons-grid">
+                        <li><input type="text" class="form-input" id="firstNamelastName" placeholder="First & Lastname"></li>         
+                        <li><input type="text" class="form-input" id="inputEmail" placeholder="Company email"></li>
+                        <li><input type="text" class="form-input" id="company" placeholder="Company"></li>
+                        <li><input type="text" class="form-input" id="telephonenumber" placeholder="Telephone number"></li>
+                    </ul>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="subject" placeholder="Subject in one sentence">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="subject" placeholder="Subject in one sentence">
+                        <textarea class="form-control" rows="5" id="question" placeholder="Your question"></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="question" placeholder="Your question">
-                    </div>
-                    <div class="form-group">
-                        <input type="file" id="exampleInputFile">
+                        <div class="image-upload">
+                            <label for="file-input">
+                                <img src="icons/plus.svg" />
+                            </label>
+                            <input id="file-input" type="file" />
+                            <label for="mail">ADD FILES</label>
+                        </div>
                     </div>
                     <button type="submit" class="btn-finish">Finish</button>
                 </form>
             </div>
+
         </div>
     </div>
 </body>
