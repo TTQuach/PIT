@@ -148,8 +148,8 @@
     <Content Include="images\capgemini logo.png" />
     <Content Include="js\angular.min.js" />
     <Content Include="home.css" />
-    <Content Include="home.html" />
-    <Content Include="home.js" />
+    <Content Include="index.html" />
+    <Content Include="index.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.1.1.min.js" />
