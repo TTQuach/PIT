@@ -1,11 +1,13 @@
 ﻿<html>
 <head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="home.css" rel="stylesheet" />
     <script src="js/angular.min.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="index.js"></script>
+    <script src="js/salesforce.js"></script>
     <title>Ask Capbot</title>
 </head>
 <body>
@@ -33,7 +35,7 @@
                 <h1>
                     <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
                 </h1>
-                <ul class="industries buttons grid" ng-controller="industry">
+                <ul class="industries buttons grid" id="00N5800000C3tCx" name="00N5800000C3tCx" ng-controller="industry">
                     <li ng-repeat="industry in ctrl.industries">
                         <button class="grid-button" ng-click="ctrl.setIndustrieText(industry.text)">
                             <img ng-src="{{industry.images[0]}}" />
@@ -51,7 +53,7 @@
                 <h1>
                     <span class="titelcolor1">Category of</span><span class="titelcolor2">your question</span>
                 </h1>
-                <ul class="buttons-grid">
+                <ul class="buttons-grid" id="00N5800000C3tD7" name="00N5800000C3tD7">
                     <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/applife.png" /> Application Services</button></li>
                     <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/icon_connectivity_50x50px_0.png" /> Digital Customer Experience</button></li>
                     <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/businessprocess.png" /> Business Services</button></li>
@@ -73,19 +75,21 @@
                 <p> </p>
             </div>
 
-            <div class="form">
+            <div class="form" ng-app="submitExample">
                 <h1>
                     <span class="titelcolor1">Formulate</span><span class="titelcolor2">your question</span>
                 </h1>
-                <form>
+                <form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                    <input type=hidden name="orgid" value="00D580000004JAb">
+                    <input type=hidden name="retURL" value="https://faint-position.aerobatic.io/">
                     <ul class="buttons-grid">
-                        <li><input type="text" class="form-input" id="firstNamelastName" placeholder="First & Lastname"></li>
-                        <li><input type="text" class="form-input" id="inputEmail" placeholder="Company email"></li>
-                        <li><input type="text" class="form-input" id="company" placeholder="Company"></li>
-                        <li><input type="text" class="form-input" id="telephonenumber" placeholder="Telephone number"></li>
+                        <li><input type="text" class="form-input" id="name" size="20" name="name" placeholder="Name" required/></li>
+                        <li><input type="text" class="form-input" id="email" size="20" name="email" placeholder="Company email"></li>
+                        <li><input type="text" class="form-input" id="company" size="20" placeholder="Company"></li>
+                        <li><input type="number" class="form-input" id="phone" size="20" placeholder="Telephone number"></li>
                     </ul>
                     <div class="form-group">
-                        <input type="text" class="form-input" id="subject" placeholder="Subject in one sentence">
+                        <input type="text" class="form-input" id="subject" maxlength="80" name="subject" placeholder="Subject in one sentence">
                     </div>
                     <div class="form-group">
                         <textarea class="form-control" rows="5" id="question" placeholder="Your question"></textarea>
@@ -95,14 +99,14 @@
                             <label for="file-input">
                                 <img src="icons/plus.svg" />
                             </label>
-                            <input id="file-input" type="file" />
-                            <label for="mail">ADD FILES</label>
+                            <input id="file-input" type="file" multiple />
+                            <label for="bijlage">ADD FILES</label>
                         </div>
                     </div>
-                    <button type="submit" class="btn-finish">Finish</button>
+                    <button class="btn-finish" type="submit">Finish</button>
                 </form>
+                <div>list={{list}}</div>
             </div>
-
         </div>
     </div>
 </body>
