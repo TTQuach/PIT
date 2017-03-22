@@ -129,8 +129,25 @@ input[type="text"]{
   color: #005294
 }
 
+input[type="number"]{
+  text-align: center;
+  font-size: 16px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e7efff;
+  height: 46px;
+  width: 270px;
+  margin: auto;
+  color: #005294
+}
+
+input.grid-button{
+    display: none;
+}
+
 /*Buttons*/
-.btn-submit{
+button.btn.btn-secondary{
   background: #0094c3;
   background-image: -webkit-linear-gradient(top, #0094c3, #005294);
   background-image: -moz-linear-gradient(top, #0094c3, #005294);
@@ -176,10 +193,21 @@ input[type="text"]{
   text-decoration: none;
 }
 
+.grid-button:active, .grid-button:focus{
+  background: #0094c3;
+  text-decoration: none;
+  color: #ffffff;
+}
+
 /*input form*/
 .inputForm{
     padding: 15px;
-    float: right;
+    margin: 20px 20px 20px 45px;
+    line-height: 0px;
+}
+
+.input-group{
+    padding: 15px;
     margin: 20px 20px 20px 45px;
     line-height: 0px;
 }
@@ -194,10 +222,19 @@ input[type="text"]{
     vertical-align: top;
     float: right;
     margin: 20px 20px 20px 45px;
-    width: 535px;
 }
 .form-group{
   padding: 5px;
+}
+
+textarea.form-control{
+    font-size: 16px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    margin: auto;
+    color: #005294
 }
 .form-inline{
     margin-top: 40px;
@@ -268,6 +305,11 @@ ul.industries.buttons.grid.ng-scope{
     cursor: pointer;
 }
 
+.chatbot{
+    width: 80px;
+}
+
+
 .pit-icons{
     width: 30px;
     height: 32px;
@@ -279,6 +321,7 @@ ul.industries.buttons.grid.ng-scope{
 .header{
   background:#ffffff;
   text-align: center;
+  margin-bottom: 20px;
 }
 .pit-header-logo {
   background: #ffffff;

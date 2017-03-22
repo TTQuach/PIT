@@ -1,13 +1,18 @@
 ﻿var app = angular.module('myApp', []);
 
-app.controller("industry", function ($scope) {
+app.controller("industry", function ($scope) { 
     this.industrieText = "";
     this.setIndustrieText = function (text) {
-    this.industrieText = text;
+        this.industrieText = text;       
     }
+    this.industrieDefinition = "";
+    this.setIndustrieDefinition = function (definition) {
+        this.industrieDefinition = definition;
+    }
+    
     this.industries = [{
         definition: 'Aerospace & Defence',
-        text: 'Hmm i like Aerospaceeee.',
+        text: 'Hmm I like Aerospaceeee.',
         images: ["icons/industries/aerospace.png"]
     }, {
         definition: 'Industrial Products',
@@ -47,27 +52,27 @@ app.controller("industry", function ($scope) {
         images: ["icons/industries/oil.png"]
     }, {
         definition: 'Healthcare',
-        text: 'BLABLABLABLA.',
+        text: 'Healthhh.',
         images: ["icons/industries/healthcare.png"]
     }, {
         definition: 'Public Sector',
-        text: 'BLABLABLABLA.',
+        text: 'Publicaaa.',
         images: ["icons/industries/publicsec.png"]
     }, {
         definition: 'High Tech',
-        text: 'BLABLABLABLA.',
+        text: 'HITECH.',
         images: ["icons/industries/hightech.png"]
     }, {
         definition: 'Telecoms & Entertainment',
-        text: 'BLABLABLABLA.',
+        text: 'Telecomss.',
         images: ["icons/industries/telecom.png"]
     }, {
         definition: 'Utilities',
-        text: 'BLABLABLABLA.',
+        text: 'Utilities.',
         images: ["icons/industries/utilities.png"]
     }, {
         definition: 'Other',
-        text: 'BLABLABLABLA.',
+        text: 'Other.',
         images: ["icons/industries/telecom.png"]
 
     }];

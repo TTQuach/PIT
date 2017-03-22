@@ -7,7 +7,6 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="index.js"></script>
-    <script src="js/salesforce.js"></script>
     <title>Ask Capbot</title>
 </head>
 <body>
@@ -15,97 +14,176 @@
         <div class="pit-header-logo"><img src="images/capgemini logo.png" alt="logo" /></div>
         <div class="header-text"><h1><span class="titelcolor1">Ask</span><span class="titelcolor2">Capbot</span></h1></div>
     </div>
-    <div class="row">
-        <div ng-app="myApp" ng-controller="industry as ctrl" class="chat">
-            <div class="bubble me">
-                <p>My name is Capbot. I am in contact with my <span class="strong">180.000 colleagues</span>. I know about their expertise and I am able to match them to your questions.</p>
-            </div>
 
-            <div class="bubble me"><p>So nice to meet you! What is your name so we can make this conversation a bit more personal?</p></div>
-            <div class="inputForm">
-                <h1>What's your name?</h1>
-                <input type="text" ng-model="name" placeholder="Enter name here">
-                <button ng-click="showDivIntro=true" type="submit" class="btn-submit">Send</button>
-            </div>
-            <div class="bubble me" ng-show="showDivIntro" id="div4">
-                <p>Well nice to meet you <span class="strong">{{name}}</span>. I suppose you have a burning question for me. But before we begin with this I need to know two things from you. <span class="italic">1. In what kind of industry is your question related?</span></p>
-            </div>
-
-            <div class="form">
-                <h1>
-                    <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
-                </h1>
-                <ul class="industries buttons grid" id="00N5800000C3tCx" name="00N5800000C3tCx" ng-controller="industry">
-                    <li ng-repeat="industry in ctrl.industries">
-                        <button class="grid-button" ng-click="ctrl.setIndustrieText(industry.text)">
-                            <img ng-src="{{industry.images[0]}}" />
-                            {{industry.definition}}
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bubble me procedure-details" ng-if="ctrl.industrieText != ''">
-                <p>{{ctrl.industrieText}} Just one more question before you're up <span class="strong">{{name}}</span>. What is the category of your question?</p>
-            </div>
-
-            <div class="form">
-                <h1>
-                    <span class="titelcolor1">Category of</span><span class="titelcolor2">your question</span>
-                </h1>
-                <ul class="buttons-grid" id="00N5800000C3tD7" name="00N5800000C3tD7">
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/applife.png" /> Application Services</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/icon_connectivity_50x50px_0.png" /> Digital Customer Experience</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/businessprocess.png" /> Business Services</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/infraserve.png" /> Infrastructure Services</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/cloud.png" /> Cloud Choice</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/insightsdata.png" /> Insights & Data</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/conserve.png" /> Consulting Services</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/profserv.png"> Technology and Engineering</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/digiservices.png" /> Digital Services</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/bpo.png" /> Ready2Series</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/digitalmfg.png" /> Digital Manufacturing</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/secureyourassets.png" /> Secure your assets</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/testserve.png" /> Testing Services</button></li>
-                    <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png" /> Other</button></li>
-                </ul>
-            </div>
-
-            <div class="bubble me">
-                <p> </p>
-            </div>
-
-            <div class="form" ng-app="submitExample">
-                <h1>
-                    <span class="titelcolor1">Formulate</span><span class="titelcolor2">your question</span>
-                </h1>
-                <form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
-                    <input type=hidden name="orgid" value="00D580000004JAb">
-                    <input type=hidden name="retURL" value="https://faint-position.aerobatic.io/">
-                    <ul class="buttons-grid">
-                        <li><input type="text" class="form-input" id="name" size="20" name="name" placeholder="Name" required/></li>
-                        <li><input type="text" class="form-input" id="email" size="20" name="email" placeholder="Company email"></li>
-                        <li><input type="text" class="form-input" id="company" size="20" placeholder="Company"></li>
-                        <li><input type="number" class="form-input" id="phone" size="20" placeholder="Telephone number"></li>
-                    </ul>
-                    <div class="form-group">
-                        <input type="text" class="form-input" id="subject" maxlength="80" name="subject" placeholder="Subject in one sentence">
+    <div ng-app="myApp" ng-controller="industry as ctrl" class="chat">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <div class="bubble me">
+                        <p>My name is Capbot. I am in contact with my <span class="strong">180.000 colleagues</span>. I know about their expertise and I am able to match them to your questions.</p>
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" id="question" placeholder="Your question"></textarea>
+                </div>
+                <div class="col-md-6 col-xs-4">
+                    <img class="chatbot" src="images/chatbot.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <div class="bubble me">
+                        <p>So nice to meet you! What is your name so we can make this conversation a bit more personal?</p>
                     </div>
-                    <div class="form-group">
-                        <div class="image-upload">
-                            <label for="file-input">
-                                <img src="icons/plus.svg" />
-                            </label>
-                            <input id="file-input" type="file" multiple />
-                            <label for="bijlage">ADD FILES</label>
-                        </div>
+                </div>
+                <div class="col-md-6 col-xs-4">
+                    <img class="chatbot" src="images/chatbot.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <h1>What's your name?</h1>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="name" placeholder="Enter name here">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button" ng-click="showDivIntro=true">Send</button>
+                        </span>
                     </div>
-                    <button class="btn-finish" type="submit">Finish</button>
-                </form>
-                <div>list={{list}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <div class="bubble me" ng-show="showDivIntro" id="div4">
+                        <p>Well nice to meet you <span class="strong">{{name}}</span>. I suppose you have a burning question for me. But before we begin with this I need to know two things from you. <span class="italic">1. In what kind of industry is your question related?</span></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-4" ng-show="showDivIntro" id="div4">
+                    <img class="chatbot" src="images/chatbot.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <div class="form">
+                        <h1>
+                            <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
+                        </h1>
+                        <ul class="industries buttons grid" ng-controller="industry">
+                            <li ng-repeat="industry in ctrl.industries">
+                                <button class="grid-button ng-binding" ng-click="ctrl.setIndustrieText(industry.text);ctrl.setIndustrieDefinition(industry.definition)">
+                                    <img ng-src="{{industry.images[0]}}" />
+                                    {{industry.definition}}
+                                </button>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8" ng-show="showDivIntro" id="div4">
+                    <div class="bubble me procedure-details" ng-if="ctrl.industryText != ''">
+                        <p>{{ctrl.industrieText}} Just one more question before you're up <span class="strong">{{name}}</span>. What is the category of your question?</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-4" ng-show="showDivIntro" id="div4">
+                    <img class="chatbot" src="images/chatbot.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <div class="form">
+                        <h1>
+                            <span class="titelcolor1">Category of</span><span class="titelcolor2">your question</span>
+                        </h1>
+                        <ul class="buttons-grid" id="00N5800000C3tD7" name="00N5800000C3tD7">
+                            <li><button type="submit" value="applife" class="grid-button"><img class="pit-icons" src="icons/services/applife.png"> Application Services</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/icon_connectivity_50x50px_0.png"> Digital Customer Experience</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/businessprocess.png"> Business Services</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/infraserve.png"> Infrastructure Services</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/cloud.png"> Cloud Choice</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/insightsdata.png"> Insights &amp; Data</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/conserve.png"> Consulting Services</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/profserv.png"> Technology and Engineering</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/digiservices.png"> Digital Services</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/bpo.png"> Ready2Series</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/digitalmfg.png"> Digital Manufacturing</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/secureyourassets.png"> Secure your assets</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/services/testserve.png"> Testing Services</button></li>
+                            <li><button type="submit" class="grid-button"><img class="pit-icons" src="icons/industries/telecom.png"> Other</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8" ng-show="showDivIntro" id="div4">
+                    <div class="bubble me">
+                        <p> TEST </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-4" ng-show="showDivIntro" id="div4">
+                    <img class="chatbot" src="images/chatbot.png" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-8">
+                    <div class="form" ng-app="submitExample">
+                        <h1>
+                            <span class="titelcolor1">Formulate</span><span class="titelcolor2">your question</span>
+                        </h1>
+                        <form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                            <input type=hidden name="orgid" value="00D580000004JAb">
+                            <input type=hidden name="retURL" value="https://faint-position.aerobatic.io/">
+                            <ul class="buttons-grid">
+                                <li><input type="text" class="form-input" id="name" size="20" name="name" placeholder="Name" required /></li>
+                                <li><input type="text" class="form-input" id="email" size="20" name="email" placeholder="Company email"></li>
+                                <li><input type="text" class="form-input" id="company" maxlength="80" name="company" size="20" placeholder="Company"></li>
+                                <li><input type="text" class="form-input" id="phone" maxlength="40" name="phone" size="20" placeholder="Telephone number"></li>
+                            </ul>
+                            <div class="form-group">
+                                <input type="text" class="form-input" id="subject" maxlength="80" name="subject" placeholder="Subject in one sentence">
+                            </div>
+
+                            <div class="form-group" ng-if="ctrl.industryDefinition != ''">
+                                Industry:<input type="text" id="00N5800000C3uMK" maxlength="80" name="00N5800000C3uMK" size="20" value="{{ctrl.industrieDefinition}}" />
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" name="description" placeholder="Your question"></textarea>
+                            </div>
+                            <!--<div class="form-group">
+                                <div class="image-upload">
+                                    <label for="file-input">
+                                        <img src="icons/plus.svg" />
+                                    </label>
+                                    <input id="file-input" type="file" multiple />
+                                    <label for="bijlage">ADD FILES</label>
+                                </div>
+                            </div>-->
+                            <button class="btn-finish" type="submit">Finish</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
