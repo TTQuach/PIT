@@ -142,6 +142,19 @@ input[type="number"]{
   color: #005294
 }
 
+input[type="number"]{
+  text-align: center;
+  font-size: 16px;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #e7efff;
+  height: 46px;
+  width: 270px;
+  margin: auto;
+  color: #005294
+}
+
 input.grid-button{
     display: none;
 }
@@ -330,11 +343,47 @@ ul.industries.buttons.grid.ng-scope{
   display:inline-block !important; 
 }
 .header-text {
-    width: 140px; /* Intentionaly has more width */
+    /*width: 140px;  Intentionaly has more width */
     display: inline-block;
 }
 .header-text h1{
     font-size: 27px;
-    display: inline;
-    padding-left: 50px;
+    padding: 20px;
+}
+.classification{
+    font-size: 16px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    height: 46px;
+    width: 270px;
+    margin: auto;
+    color: #0094c3;
+    padding: 10px;
+}
+
+
+/*function chatbot*/
+#intro1{
+    visibility: hidden;
+}
+#intro2{
+    visibility: hidden;
+}
+#intro3{
+    visibility: hidden;
+}
+#classificationIndus{
+    display: none;
+}
+#questionCat{
+    display: none;
+}
+#classificationCat{
+    display: none;
+}
+#catText{
+    display: none;
+}
+#formQuest{
+    display: none;
 }

@@ -94,10 +94,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="category.js" />
     <Content Include="icons\plus.svg" />
     <Content Include="icons\send.svg" />
     <Content Include="icons\services\secureyourassets.png" />
     <Content Include="images\chatbot.png" />
+    <Content Include="index.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -149,7 +151,7 @@
     <Content Include="js\angular.min.js" />
     <Content Include="home.css" />
     <Content Include="index.html" />
-    <Content Include="index.js" />
+    <Content Include="industry.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.1.1.min.js" />
