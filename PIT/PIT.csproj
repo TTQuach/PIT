@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="category.js" />
+    <Content Include="controller.js" />
     <Content Include="icons\plus.svg" />
     <Content Include="icons\send.svg" />
     <Content Include="icons\services\secureyourassets.png" />

@@ -38,7 +38,10 @@ $(function () {
     })
 });
 
-function showForm(formQuest) {
-    document.getElementById(formQuest).style.display = "block";
-}
- 
+$(function () {
+    $('#showForm').click(function () {
+        $('#catText').show();
+        $('#formQuest').show();
+    })
+});
+

@@ -1,6 +1,8 @@
-﻿var app = angular.module('myApp', []);
+﻿'use strict';
 
-app.controller("industry", function ($scope) {
+var industryModule = angular.module('industry', []);
+industryModule.controller("industryController",
+    function ($scope) {
     this.industrieText = "";
     this.setIndustrieText = function (text) {
         this.industrieText = text;
@@ -9,7 +11,6 @@ app.controller("industry", function ($scope) {
     this.setIndustrieDefinition = function (definition) {
         this.industrieDefinition = definition;
     }
-
     this.industries = [{
         definition: 'Aerospace & Defence',
         text: 'Hmm I like Aerospaceeee.',
@@ -77,3 +78,6 @@ app.controller("industry", function ($scope) {
 
     }];
 });
+
+
+

@@ -294,7 +294,14 @@ ul.buttons-grid{
     column-gap: 10px;
 }
 
-ul.industries.buttons.grid.ng-scope{
+ul.industries.buttons.grid{
+    list-style-type: none;
+    padding-top: 20px;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+ul.categories.buttons.grid{
     list-style-type: none;
     padding-top: 20px;
     column-count: 2;

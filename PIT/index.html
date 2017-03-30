@@ -6,11 +6,11 @@
     <link href="home.css" rel="stylesheet" />
     <script src="js/angular.min.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="industry.js"></script>
     <script src="index.js"></script>
+    <script src="controller.js"></script>
     <title>Ask The Expert</title>
 </head>
-<body ng-app="myApp" ng-controller="industry as ctrl">
+<body ng-app="classification" ng-controller="myCtrlMain">
     <div class="header">
         <!--<div class="pit-header-logo"><img src="images/capgemini logo.png" alt="logo" /></div>-->
         <div class="header-text"><h1><span class="titelcolor1">Ask</span><span class="titelcolor2">The Expert</span></h1></div>
@@ -70,23 +70,21 @@
             </div>
         </div>
 
-        <div id="classificationIndus">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-xs-10">
-                        <div class="form">
-                            <h1>
-                                <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
-                            </h1>
-                            <ul class="industries buttons grid" ng-controller="industry">
-                                <li ng-repeat="industry in ctrl.industries">
-                                    <button class="grid-button ng-binding" ng-click="ctrl.setIndustrieText(industry.text);ctrl.setIndustrieDefinition(industry.definition)" id="showCatText">
-                                        <img ng-src="{{industry.images[0]}}" />
-                                        {{industry.definition}}
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
+        <div class="container" id="classificationIndus">
+            <div class="row">
+                <div class="col-md-6 col-xs-10">
+                    <div class="form">
+                        <h1>
+                            <span class="titelcolor1">Select</span><span class="titelcolor2">your industry</span>
+                        </h1>
+                        <ul class="industries buttons grid">
+                            <li ng-repeat="industry in industries">
+                                <button class="grid-button ng-binding" ng-click="setIndustrieText(industry.text);setIndustrieDefinition(industry.definition)" id="showCatText">
+                                    <img ng-src="{{industry.images[0]}}" />
+                                    {{industry.definition}}
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -95,43 +93,43 @@
         <div class="container" id="questionCat">
             <div class="row">
                 <div class="col-md-6 col-xs-10" ng-show="showDivIntro">
-                    <div class="bubble me procedure-details" ng-if="ctrl.industryText != ''">
-                        <p>{{ctrl.industrieText}} Just one more question before you're up <span class="strong">{{name}}</span>. What is the category of your question?</p>
+                    <div class="bubble me procedure-details" ng-if="industryText != ''">
+                        <p>{{industrieText}} Just one more question before you're up <span class="strong">{{name}}</span>. What is the category of your question?</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-2" ng-show="showDivIntro">
                     <img class="chatbot" src="images/chatbot.png" />
                 </div>
             </div>
+        </div>
 
-            <div class="container" id="classificationCat" ng-show="showDivIntro">
-                <div class="row">
-                    <div class="col-md-6 col-xs-10">
-                        <div class="form">
-                            <h1>
-                                <span class="titelcolor1">Category of</span><span class="titelcolor2">your question</span>
-                            </h1>
-                            <ul class="categories buttons grid">
-                                <li>
-                                    <button class="grid-button ng-binding" ng-click="ctrl.setcategorietext(category.text);ctrl.setcategoriedefinition(category.definition)" onclick="showForm('formQuest')">
-                                        <img ng-src="{{category.images[0]}}" />
-                                        {{category.definition}}
-                                    </button>
-                                </li>
-                            </ul>
+        <div class="container" id="classificationCat" ng-show="showDivIntro">
+            <div class="row">
+                <div class="col-md-6 col-xs-10">
+                    <div class="form">
+                        <h1>
+                            <span class="titelcolor1">Category of</span><span class="titelcolor2">your question</span>
+                        </h1>
+                        <ul class="categories buttons grid">
+                            <li ng-repeat="category in categories">
+                                <button class="grid-button ng-binding" ng-click="setCategorieText(category.text);setCategorieDefinition(category.definition)" id="showForm">
+                                    <img ng-src="{{category.images[0]}}" />
+                                    {{category.definition}}
+                                </button>
+                            </li>
+                        </ul>
 
-                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
 
         <div class="container" id="catText">
             <div class="row">
-                <div class="col-md-6 col-xs-10" ng-show="showDivIntro2" id="div5">
-                    <div class="bubble me procedure-details" ng-if="ctrl.categoryText != ''">
-                        <p>We are really good at {{ctrl.categorieText}}. We have answered many questions about {{ctrl.categorieText}}. You are almost there. Fill in the form beneath and you are done!</p>
+                <div class="col-md-6 col-xs-10">
+                    <div class="bubble me procedure-details" ng-if="categoryText != ''">
+                        <p>We are really good at <span class="strong">{{categorieText}}</span> We have answered many questions about <span class="strong"> {{categorieText}}</span> You are almost there. Fill in the form beneath and you are done!</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-2" ng-show="showDivIntro2" id="div5">
@@ -143,7 +141,7 @@
         <div class="container" id="formQuest">
             <div class="row">
                 <div class="col-md-6 col-xs-10">
-                    <div class="form" ng-app="submitExample">
+                    <div class="form">
                         <h1>
                             <span class="titelcolor1">Formulate</span><span class="titelcolor2">your question</span>
                         </h1>
@@ -160,12 +158,12 @@
                                 <input type="text" class="form-input" id="subject" maxlength="80" name="subject" placeholder="Subject in one sentence*" required>
                             </div>
 
-                            <div class="form-group" ng-if="ctrl.industryDefinition != ''">
-                                <span class="classification">Industry:</span><input type="text" class="form-input" id="00N5800000C3uMK" maxlength="80" name="00N5800000C3uMK" size="20" value="{{ctrl.industrieDefinition}}" />
+                            <div class="form-group" ng-if="industrieDefinition != ''">
+                                <span class="classification">Industry:</span><input type="text" class="form-input" id="00N5800000C3uMK" maxlength="80" name="00N5800000C3uMK" size="20" value="{{industrieDefinition}}" />
                             </div>
 
-                            <div class="form-group">
-                                <span class="classification">Category:</span><input type="text" class="form-input" maxlength="80" size="20" value="" />
+                            <div class="form-group" ng-if="categorieDefinition != ''">
+                                <span class="classification">Category:</span><input type="text" class="form-input" id="00N5800000C3uMP" maxlength="80" name="00N5800000C3uMP" size="20" value="{{categorieDefinition}}" />
                             </div>
 
                             <div class="form-group">
