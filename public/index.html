@@ -9,6 +9,7 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
     <script src="js/angular-scroll.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="industry2.js"></script>
     <title>Ask The Expert</title>
@@ -22,6 +23,9 @@
                 <h1>
                     <span class="titelcolor1">Ask</span><span class="titelcolor2">The Expert</span>
                 </h1>
+            </div>
+            <div class="about">
+            <a href="/about.html">About</a>
             </div>
         </div>
 
@@ -150,8 +154,7 @@
 
                     <form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" name="endForm">
                         <input type=hidden name="orgid" value="00D580000004JAb">
-                        <input type=hidden name="retURL" value="http://www.asktheexpert.info/">
-
+                        <input type=hidden name="retURL" value="http://localhost:8001/thankyou.html">
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" class="form-input" id="name" maxlength="50" name="name" placeholder="Name*" required />
@@ -200,6 +203,8 @@
                 </div>
             </div>
         </div>
-    </div><!-- Einde container -->
+    </div>
+    <!-- Einde container -->
+</div>
 </body>
 </html>
