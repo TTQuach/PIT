@@ -7,6 +7,7 @@
     <link href="home.css" rel="stylesheet" />
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="industry2.js"></script>
     <title>Ask The Expert</title>
@@ -20,6 +21,9 @@
                 <h1>
                     <span class="titelcolor1">Ask</span><span class="titelcolor2">The Expert</span>
                 </h1>
+            </div>
+            <div class="about">
+            <a href="/about.html">About</a>
             </div>
         </div>
 
@@ -146,7 +150,7 @@
 
                     <form action="https://www.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
                         <input type=hidden name="orgid" value="00D580000004JAb">
-                        <input type=hidden name="retURL" value="http://localhost:8001/">
+                        <input type=hidden name="retURL" value="http://localhost:8001/thankyou.html">
 
                         <div class="row">
                             <div class="col-md-6 form-group">
@@ -162,7 +166,7 @@
                                 <input type="text" class="form-input" id="company" maxlength="80" name="company" size="20" placeholder="Company*" required>
                             </div>
                             <div class="col-md-6 form-group">
-                                <input type="number" class="form-input" id="phone" maxlength="20" name="phone" pattern="[0-9]{10}" size="20" placeholder="Telephone number*" required>
+                                <input type="number" class="form-input" id="phone" maxlength="20" name="phone" pattern="[0-9]" size="20" placeholder="Telephone number*" required>
                             </div>
                         </div>
 
@@ -207,5 +211,6 @@
             </div>
         </div>
     <!-- Einde container -->
+</div>
 </body>
 </html>
