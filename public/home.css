@@ -334,3 +334,9 @@ ul.industries.buttons.grid.ng-scope{
         transform: translate3d(0, 0, 0);
     }
 }
+
+/*About page css*/
+.aboutText p{
+	color: #ffffff;
+	text-align: justify;
+}
