@@ -1,0 +1,346 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+body{
+    background-image: url("images/background.jpg");
+    background-size: cover;
+}
+
+p {
+	font-family: 'Montserrat', Helvetica, sans-serif;
+	color: #005294;
+	font-size: 18px;
+    text-align: left;
+}
+
+ol, ul{
+    margin-bottom: 0;
+}
+
+.titelcolor1{
+    color:#005294;
+    padding-right: 5px;
+}
+
+.titelcolor2{
+    color:#0094c3;
+}
+
+.strong{
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/*Speech bubble*/
+.bubble {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 20px 18px;
+    position: relative;
+    vertical-align: top;
+}
+
+.bubble::before {
+    background-color: #ffffff;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform: rotate( 29deg) skew( -35deg);
+    -moz-transform: rotate( 29deg) skew( -35deg);
+    -ms-transform: rotate( 29deg) skew( -35deg);
+    -o-transform: rotate( 29deg) skew( -35deg);
+    -webkit-transform: rotate( 29deg) skew( -35deg);
+    width: 20px;
+}
+
+.you {
+    float: left;
+    margin: 20px 45px 20px 20px;
+}
+
+.you::before {
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4);
+    left: -9px;
+}
+
+.me {
+    float: right;
+    margin: 20px 0px;
+}
+
+.me::before {
+    box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4);
+    right: -9px;
+}
+
+th, td{
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: #005294;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    padding: 10px;
+}
+
+input[type="text"], input[type="number"], input[type="email"]{
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    height: 46px;
+    width: 270px;
+    color: #005294
+}
+
+input.grid-button{
+    display: none;
+}
+
+/*Buttons*/
+button.btn.btn-secondary{
+    background: #0094c3;
+    background-image: -webkit-linear-gradient(top, #0094c3, #005294);
+    background-image: -moz-linear-gradient(top, #0094c3, #005294);
+    background-image: -ms-linear-gradient(top, #0094c3, #005294);
+    background-image: -o-linear-gradient(top, #0094c3, #005294);
+    background-image: linear-gradient(to bottom, #0094c3, #005294);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    height: 46px;
+    width: 188px;
+}
+
+.btn-finish{
+    background: #0094c3;
+    background-image: -webkit-linear-gradient(top, #0094c3, #005294);
+    background-image: -moz-linear-gradient(top, #0094c3, #005294);
+    background-image: -ms-linear-gradient(top, #0094c3, #005294);
+    background-image: -o-linear-gradient(top, #0094c3, #005294);
+    background-image: linear-gradient(to bottom, #0094c3, #005294);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    height: 46px;
+    width: 188px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #0094c3;
+    text-decoration: none;
+}
+
+.grid-button:active, .grid-button:focus{
+    background: #0094c3;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*input form*/
+.inputForm{
+    padding: 15px;
+    margin: 20px 20px 20px 45px;
+    line-height: 0px;
+}
+
+.input-group{
+    padding: 15px;
+    margin: 20px 0px;
+    line-height: 0px;
+}
+
+.form{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    padding: 20px 18px;
+    margin: 30px 16px;
+}
+
+.form h1{
+    padding-bottom: 20px;
+}
+
+.form-group{
+    padding: 5px;
+}
+
+textarea.form-control{
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    color: #005294
+}
+.form-inline{
+    margin-top: 40px;
+}
+textarea#question{
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    font-size: 16px;
+    color: #005294;
+}
+input.form-input{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+
+/*buttons*/
+.grid-button{
+    font-family: 'Montserrat', Helvetica, sans-serif;
+	color: #005294;
+    text-align: left;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e7efff;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.grid-button:hover{
+    background: #0094c3;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul.buttons.grid{
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+ul.industries.buttons.grid.ng-scope{
+    list-style-type: none;
+    padding-top: 20px;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.image-upload{
+    text-align: center;
+}
+
+.image.image-upload label{
+    color:#005294;
+}
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 40px;
+    cursor: pointer;
+}
+
+.chatbot{
+    width: 80px;
+}
+
+.pit-icons{
+    width: 30px;
+    height: 32px;
+}
+
+/* TO DO: icons change on hover, ask UX to deliver white icons*/
+
+/*page header*/
+.header{
+    background:#ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 15px;
+}
+
+.pit-header-logo {
+    background: #ffffff;
+    height: 110px;
+    padding-top: 25px;
+    display: inline-block !important;
+}
+.header-text {
+    /*width: 140px;  Intentionaly has more width */
+    display: inline-block;
+}
+.header-text h1{
+    font-size: 27px;
+    padding: 20px;
+}
+
+/*function chatbot*/
+#classificationIndus {
+    display: none;
+}
+
+
+/* Animations */
+.conversationItem.ng-hide{
+    opacity: 0;
+}
+
+.conversationItem{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}

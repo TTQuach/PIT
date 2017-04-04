@@ -1,0 +1,16 @@
+{
+  "name": "front-end-server",
+  "version": "1.0.0",
+  "description": "The server for the front-end files.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Capgemini",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
+}
