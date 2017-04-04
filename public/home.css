@@ -20,7 +20,7 @@ h2{
 }
 
 body{
-    background-image: url("images/background.jpg");
+    background: url("images/background.jpg");
     background-size: cover;
 }
 
@@ -127,48 +127,39 @@ input.grid-button{
 }
 
 /*Buttons*/
-button.btn.btn-secondary{
+.btn{
     background: #0094c3;
     background-image: -webkit-linear-gradient(top, #0094c3, #005294);
     background-image: -moz-linear-gradient(top, #0094c3, #005294);
     background-image: -ms-linear-gradient(top, #0094c3, #005294);
     background-image: -o-linear-gradient(top, #0094c3, #005294);
     background-image: linear-gradient(to bottom, #0094c3, #005294);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
+    color: white;
     text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 20px;
     height: 46px;
     width: 188px;
-}
-
-.btn-finish{
-    background: #0094c3;
-    background-image: -webkit-linear-gradient(top, #0094c3, #005294);
-    background-image: -moz-linear-gradient(top, #0094c3, #005294);
-    background-image: -ms-linear-gradient(top, #0094c3, #005294);
-    background-image: -o-linear-gradient(top, #0094c3, #005294);
-    background-image: linear-gradient(to bottom, #0094c3, #005294);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    height: 46px;
-    width: 188px;
-    text-align: center;
+    border: none;
 }
 
 .btn:hover {
     background: #0094c3;
     text-decoration: none;
+    color: white;
+}
+
+.btn-secondary{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.btn-finish{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 
 .grid-button:active, .grid-button:focus{
@@ -181,13 +172,13 @@ button.btn.btn-secondary{
 .inputForm{
     padding: 15px;
     margin: 20px 20px 20px 45px;
-    line-height: 0px;
+    line-height: 0;
 }
 
 .input-group{
     padding: 15px;
-    margin: 20px 0px;
-    line-height: 0px;
+    margin: 20px 0;
+    line-height: 0;
 }
 
 .form{
@@ -310,19 +301,13 @@ ul.industries.buttons.grid.ng-scope{
     display: inline-block !important;
 }
 .header-text {
-    /*width: 140px;  Intentionaly has more width */
     display: inline-block;
 }
+
 .header-text h1{
     font-size: 27px;
     padding: 20px;
 }
-
-/*function chatbot*/
-#classificationIndus {
-    display: none;
-}
-
 
 /* Animations */
 .conversationItem.ng-hide{
@@ -334,6 +319,11 @@ ul.industries.buttons.grid.ng-scope{
     transition: all 0.5s ease-in;
 }
 
+.conversationItem.ng-hide-remove{
+    animation: 0.4s slideInDown;
+}
+
+/* De eerste drie berichten komen met een mooie animatie omlaag */
 @keyframes slideInDown {
     from {
         transform: translate3d(0, -100%, 0);
