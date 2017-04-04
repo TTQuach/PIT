@@ -10,10 +10,6 @@
         "definition": "Business Services",
         "text": "Business Services.",
         "images": ["icons/services/businessprocess.png"]
-    },{
-        "definition": "Infrastructure Services",
-        "text": "Infrastructure Services.",
-        "images": ["icons/services/infraserve.png"]
     }, {
         "definition": "Cloud Choice",
         "text": "We are really good at Cloud services. Actually if I am looking in my database...We have answered 300 questions about Cloud Services.",
