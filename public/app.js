@@ -1,5 +1,24 @@
 (function() {
-    var app = angular.module("industry", ['ngAnimate', 'duScroll'])
+    var app = angular.module("myApp", ['ngAnimate', 'duScroll', 'ui.router'])
+    .config(function($stateProvider, $urlRouterProvider){
+
+        $urlRouterProvider.otherwise('/home');
+
+        $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: 'home.html',
+            controller: 'MainController'
+        })
+        .state('thankyou', {
+            url: '/thankyou',
+            templateUrl: 'thankyou.html'
+        })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'about.html'
+        })
+    })
         .controller('MainController', function($scope, $interval, $http, $document, $timeout) {
             $http.get('products.json')
                 .then(function (res) {
