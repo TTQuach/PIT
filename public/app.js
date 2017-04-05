@@ -18,6 +18,10 @@
             url: '/about',
             templateUrl: 'about.html'
         })
+        .state('header', {
+            url: '/header',
+            templateUrl: 'header.html'
+        })
     })
         .controller('MainController', function($scope, $interval, $http, $document, $timeout) {
             $http.get('products.json')
