@@ -1,33 +1,34 @@
 (function() {
     var app = angular.module("myApp", ['ngAnimate', 'duScroll', 'ui.router'])
-    .config(function($stateProvider, $urlRouterProvider){
+        .config(function($stateProvider, $urlRouterProvider){
 
-        $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/home');
 
-        $stateProvider
-        .state('home', {
-            url: '/home',
-            templateUrl: 'home.html',
-            controller: 'MainController'
+            $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'home.html',
+                controller: 'MainController'
+            })
+            .state('thankyou', {
+                url: '/thankyou',
+                templateUrl: 'thankyou.html'
+            })
+            .state('about', {
+                url: '/about',
+                templateUrl: 'about.html'
+            })
+            .state('header', {
+                url: '/header',
+                templateUrl: 'header.html'
+            })
         })
-        .state('thankyou', {
-            url: '/thankyou',
-            templateUrl: 'thankyou.html'
-        })
-        .state('about', {
-            url: '/about',
-            templateUrl: 'about.html'
-        })
-        .state('header', {
-            url: '/header',
-            templateUrl: 'header.html'
-        })
-    })
         .controller('MainController', function($scope, $interval, $http, $document, $timeout) {
-            $http.get('products.json')
+            // No industry choice for now
+            /*$http.get('products.json')
                 .then(function (res) {
                     $scope.todos = res.data;
-                });
+                });*/
 
             $http.get('category.json')
                 .then(function (result) {
@@ -59,6 +60,7 @@
              /* Scroll naar het volgende gedeelte als de naam is ingevuld. */
              $scope.faseOne = function(){
                  $scope.showDivIntro = true;
+                 $scope.questionCat2 = true;
                  // We moeten wachten tot het DOM element is aangemaakt (of daadwerkelijk op het scherm getoond wordt).
                  $timeout(faseOneScrollDown, 100);
              };
@@ -68,11 +70,10 @@
                  $document.scrollToElement(showDivIntroElement, 20, 1000);
              };
 
-            /* Scroll naar het volgende gedeelte, fase twee */
+            /* Scroll naar het volgende gedeelte, fase twee
              $scope.go = function (index) {
                  $scope.industrydef = $scope.todos[index];
                  $scope.questionCat = true;
-                 $scope.questionCat2 = true;
                  $timeout(faseTwoScrollDown, 100);
              };
 
@@ -80,6 +81,7 @@
                  var questionCatElement = angular.element(document.getElementById('questionCat'));
                  $document.scrollToElement(questionCatElement, 20, 1000);
              };
+             */
 
              /* Scroll naar het laatste gedeelte, het eindformulier */
              $scope.go2 = function (index) {
