@@ -1,6 +1,6 @@
 (function() {
     var app = angular.module("myApp", ['ngAnimate', 'duScroll', 'ui.router'])
-        .config(function($stateProvider, $urlRouterProvider){
+        .config(function($stateProvider, $urlRouterProvider, $locationProvider){
 
             $urlRouterProvider.otherwise('/home');
 
@@ -22,6 +22,8 @@
                 url: '/header',
                 templateUrl: 'header.html'
             })
+
+            $locationProvider.html5Mode(true);
         })
         .controller('MainController', function($scope, $interval, $http, $document, $timeout) {
             // No industry choice for now
