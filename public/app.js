@@ -25,12 +25,14 @@
 
             $locationProvider.html5Mode(true);
         })
-        .controller('MainController', function($scope, $interval, $http, $document, $timeout) {
+        .controller('MainController', function($scope, $interval, $http, $document, $timeout, $state) {
             // No industry choice for now
             /*$http.get('products.json')
                 .then(function (res) {
                     $scope.todos = res.data;
                 });*/
+
+
 
             $http.get('category.json')
                 .then(function (result) {
@@ -56,8 +58,12 @@
                  $interval(showIt3, 3000, 9);
              };
 
+             console.log($state.current.name);
+
              // Vuur de start functie af.
-             startShow();
+             if($state.current.name === "home"){
+                 startShow();
+             }
 
              /* Scroll naar het volgende gedeelte als de naam is ingevuld. */
              $scope.faseOne = function(){
