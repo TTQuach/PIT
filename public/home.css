@@ -168,6 +168,28 @@ input.grid-button{
     color: #ffffff;
 }
 
+.header-link{
+    font-size: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: white;
+    background: #0094c3;
+    background-image: -webkit-linear-gradient(top, #0094c3, #005294);
+    background-image: -moz-linear-gradient(top, #0094c3, #005294);
+    background-image: -ms-linear-gradient(top, #0094c3, #005294);
+    background-image: -o-linear-gradient(top, #0094c3, #005294);
+    background-image: linear-gradient(to bottom, #0094c3, #005294);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.header-link:hover, .header-link:active, .header-link:focus{
+    text-decoration: none;
+    color: white;
+    background: #0094c3;
+}
+
 /*input form*/
 .inputForm{
     padding: 15px;
@@ -272,12 +294,12 @@ ul.industries.buttons.grid.ng-scope{
     margin-bottom: 20px;
     margin-left: -15px;
     margin-right: -15px;
-    padding-bottom: 15px;
+    padding-bottom: 34px;
 }
 
 .pit-header-logo {
     background: #ffffff;
-    height: 110px;
+    height: 135px;
     padding-top: 25px;
     display: inline-block !important;
 }
