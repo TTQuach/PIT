@@ -57,12 +57,12 @@
         "id": 12,
         "definition": "Testing Services",
         "text": "We are really good at Testing Services. We have answered many questions about it.",
-        "images": ["icons/services/testserve.png"]
+        "images": ["icons/services/test.png"]
     }, {
         "id": 13,
         "definition": "Applied Innovation Exchange",
         "text": "We are really good at Applied Innovation Exchange. We have answered many questions about it.",
-        "images": ["icons/services/telecom.png"]
+        "images": ["icons/services/ready2series.png"]
     }, {
         "id": 14,
         "definition": "Other",

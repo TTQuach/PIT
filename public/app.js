@@ -61,6 +61,7 @@
              console.log($state.current.name);
 
              // Vuur de start functie af.
+
              if($state.current.name === "home"){
                  startShow();
              }

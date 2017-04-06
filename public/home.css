@@ -219,6 +219,12 @@ input.grid-button{
     padding: 5px;
 }
 
+.labelForm{
+	color: #0094c3;
+	font-size: 16px;
+	font-weight: 500;
+}
+
 textarea.form-control{
     font-size: 16px;
     background-color: #ffffff;
@@ -342,4 +348,10 @@ ul.industries.buttons.grid.ng-scope{
 .aboutText p{
 	color: #ffffff;
 	text-align: justify;
+	padding-top: 40px;
+}
+
+.icons{
+	width: 30px;
+	height: 24px;
 }
