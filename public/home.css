@@ -185,7 +185,7 @@ input.grid-button{
     background-color: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 0 6px #B2B2B2;
-    padding: 20px 18px;
+    padding: 18px 30px;
     margin: 30px 16px;
 }
 
@@ -252,25 +252,6 @@ ul.industries.buttons.grid.ng-scope{
     padding-top: 20px;
     column-count: 2;
     column-gap: 10px;
-}
-
-.image-upload{
-    text-align: center;
-}
-
-.image.image-upload label{
-    color:#005294;
-}
-
-.image-upload > input
-{
-    display: none;
-}
-
-.image-upload img
-{
-    width: 40px;
-    cursor: pointer;
 }
 
 .chatbot{

@@ -15,7 +15,7 @@
         "images": ["icons/services/businessprocess.png"]
     }, {
         "id": 4,
-        "definition": "Cloud Choice",
+        "definition": "Journey to the Cloud",
         "text": "We are really good at Cloud services. Actually if I am looking in my database...We have answered 300 questions about Cloud Services.",
         "images": ["icons/services/cloud.png"]
     }, {
@@ -40,8 +40,8 @@
         "images": ["icons/services/digiservices.png"]
     }, {
         "id": 9,
-        "definition": "Ready2Series",
-        "text": "Ready2Series.",
+        "definition": "Agile",
+        "text": "Agile.",
         "images": ["icons/services/bpo.png"]
     }, {
         "id": 10,
@@ -60,7 +60,12 @@
         "images": ["icons/services/testserve.png"]
     }, {
         "id": 13,
+        "definition": "Applied Innovation Exchange",
+        "text": "Applied Innovation Exchange.",
+        "images": ["icons/services/telecom.png"]
+    }, {
+        "id": 14,
         "definition": "Other",
-        "text": "Other.",
+        "text": "Thank you, we will use your question to specify new keywords.",
         "images": ["icons/services/telecom.png"]
 }]
