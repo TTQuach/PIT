@@ -30,7 +30,7 @@
             <h1>What's your name?</h1>
             <form name="nameInput">
                 <div class="input-group">
-                    <input type="text" class="form-control" ng-model="name" placeholder="Enter name here" size="50" >
+                    <input type="text" class="form-control" ng-model="name" placeholder="Enter name here" size="50" required>
                     <span class="input-group-btn">
                         <button ng-disabled="nameInput.$pristine" class="btn btn-secondary" type="submit" ng-click="faseOne()">Send</button>
                     </span>
