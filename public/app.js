@@ -23,7 +23,7 @@
                 templateUrl: 'header.html'
             })
 
-            $locationProvider.html5Mode(true);
+            //$locationProvider.html5Mode(true);
         })
         .controller('MainController', function($scope, $interval, $http, $document, $timeout, $state) {
             // No industry choice for now
