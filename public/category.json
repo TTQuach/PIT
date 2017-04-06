@@ -1,17 +1,17 @@
 [{
         "id": 1,
         "definition": "Application Services",
-        "text": "Application Services.",
+        "text": "We are really good at Application Services. We have answered many questions about it.",
         "images": ["icons/services/applife.png"]
     }, {
         "id": 2,
         "definition": "Digital Customer Experience",
-        "text": "DCE.",
+        "text": "We are really good at DCE. We have answered many questions about it.",
         "images": ["icons/services/icon_connectivity_50x50px_0.png"]
     }, {
         "id": 3,
         "definition": "Business Services",
-        "text": "Business Services.",
+        "text": "We are really good at Business Services. We have answered many questions about it.",
         "images": ["icons/services/businessprocess.png"]
     }, {
         "id": 4,
@@ -21,47 +21,47 @@
     }, {
         "id": 5,
         "definition": "Insights & Data",
-        "text": "Insights and Data.",
+        "text": "We are really good at Insights and Data. We have answered many questions about it.",
         "images": ["icons/services/insightsdata.png"]
     }, {
         "id": 6,
         "definition": "Consulting Services",
-        "text": "Consulting Services.",
+        "text": "We are really good at Consulting Services. We have answered many questions about it.",
         "images": ["icons/services/conserve.png"]
     }, {
         "id": 7,
         "definition": "Technology and Engineering",
-        "text": "Tech & Engineering.",
+        "text": "We are really good at Tech & Engineering. We have answered many questions about it.",
         "images": ["icons/services/profserv.png"]
     }, {
         "id": 8,
         "definition": "Digital Services",
-        "text": "Digital Services.",
+        "text": "We are really good at Digital Services. We have answered many questions about it.",
         "images": ["icons/services/digiservices.png"]
     }, {
         "id": 9,
         "definition": "Agile",
-        "text": "Agile.",
+        "text": "We are really good at Agile. We have answered many questions about it.",
         "images": ["icons/services/bpo.png"]
     }, {
         "id": 10,
         "definition": "Digital Manufacturing",
-        "text": "Digital Manufacturing.",
+        "text": "We are really good at Digital Manufacturing. We have answered many questions about it.",
         "images": ["icons/services/digitalmfg.png"]
     }, {
         "id": 11,
         "definition": "Secure your assets",
-        "text": "secure your assets.",
+        "text": "We are really good at Secure Your Assets. We have answered many questions about it.",
         "images": ["icons/services/secureyourassets.png"]
     }, {
         "id": 12,
         "definition": "Testing Services",
-        "text": "Testing Services.",
+        "text": "We are really good at Testing Services. We have answered many questions about it.",
         "images": ["icons/services/testserve.png"]
     }, {
         "id": 13,
         "definition": "Applied Innovation Exchange",
-        "text": "Applied Innovation Exchange.",
+        "text": "We are really good at Applied Innovation Exchange. We have answered many questions about it.",
         "images": ["icons/services/telecom.png"]
     }, {
         "id": 14,

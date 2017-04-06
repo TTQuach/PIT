@@ -91,6 +91,7 @@
                  $scope.catText = true;
                  $scope.formQuest = true;
                  $timeout(faseThreeScrollDown, 100);
+
              };
 
             faseThreeScrollDown = function(){
