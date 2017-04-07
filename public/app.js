@@ -67,7 +67,7 @@
              }
 
              /* Scroll naar het volgende gedeelte als de naam is ingevuld. */
-             $scope.faseOne = function(){
+             $scope.faseOne = function(){$timeout
                  $scope.showDivIntro = true;
                  $scope.questionCat2 = true;
                  // We moeten wachten tot het DOM element is aangemaakt (of daadwerkelijk op het scherm getoond wordt).
