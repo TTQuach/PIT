@@ -22,6 +22,10 @@
                 url: '/header',
                 templateUrl: 'header.html'
             })
+            .state('footer', {
+                url: '/footer',
+                templateUrl: 'footer.html'
+            })
 
             $locationProvider.html5Mode(true);
         })
