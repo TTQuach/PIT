@@ -27,7 +27,7 @@
                 templateUrl: 'footer.html'
             })
 
-            $locationProvider.html5Mode(true);
+            //$locationProvider.html5Mode(true);
         })
         .controller('MainController', function($scope, $interval, $http, $document, $timeout, $state) {
             // No industry choice for now
@@ -62,7 +62,6 @@
                  $interval(showIt3, 3000, 9);
              };
 
-             console.log($state.current.name);
 
              // Vuur de start functie af.
 
